@@ -47,7 +47,7 @@ if TYPE_CHECKING:
 else:
     logging_StreamHandler = logging.StreamHandler
 
-DEFAULT_LOG_FORMAT = "%(levelname)-8s %(name)s:%(filename)s:%(lineno)d %(message)s"
+DEFAULT_LOG_FORMAT = "%(filename)-25s %(lineno)4d %(levelname)-8s %(message)s"
 DEFAULT_LOG_DATE_FORMAT = "%H:%M:%S"
 _ANSI_ESCAPE_SEQ = re.compile(r"\x1b\[[\d;]+m")
 caplog_handler_key = StashKey["LogCaptureHandler"]()
